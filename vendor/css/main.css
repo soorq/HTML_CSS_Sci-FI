@@ -1,0 +1,95 @@
+@import url('./component/header.css');
+@import url('./component/hero.css');
+
+@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gugi&family=JetBrains+Mono:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
+/* 
+
+font-family: 'Gugi', cursive;
+font-family: 'JetBrains Mono', monospace;
+
+*/
+@font-face {
+     font-family: Technos;
+     src: url('../font/Technos/Technos.ttf') local('Technos');
+}
+
+*,
+*::after,
+*::before {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+:root {
+     --bg: #0b0b0b;
+
+     /* Main Colors */
+     --color-1: #95C5F4;
+     --color-2: #FFFFFF;
+     --color-3: #BABABA;
+     --color-4: #262626;
+     --color-5: #111111;
+     --color-6: #040404;
+}
+
+h2 {
+     font-size: 36px;
+}
+
+body {
+     width: 100%;
+     height: auto;
+     background: linear-gradient(-45deg, #11111C 30%, #111113 70%);
+     position: relative;
+     /* overflow: hidden; */
+}
+
+.wrapper {
+     background: var(--color-1);
+     position: relative;
+     width: 100%;
+     height: 100%;
+     padding: 80px;
+}
+
+.wrapper::before {
+     content: '';
+     position: absolute;
+     width: 338px;
+     height: 598px;
+     background-image: url('../img/header.png');
+     background-size: cover;
+     background-repeat: no-repeat;
+     z-index: 1;
+     top: 15px;
+     left: 15px;
+}
+
+.wrapper-content {
+     position: relative;
+     width: 100%;
+     height: 100%;
+}
+
+.wrapper-content::before {
+     width: 100%;
+     height: 65%;
+     background: var(--bg);
+     position: absolute;
+     top: 0;
+     left: 0;
+     content: '';
+     clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%, 10% 65%, 0 40%);
+     display: block;
+}
+
+.some {
+     width: 20%;
+     height: 20%;
+     clip-path: polygon(30% 30%, 100% 30%, 100% 75%, 80% 40%, 25% 40%, 0 15%, 0 0);
+     background: #243344;
+}
